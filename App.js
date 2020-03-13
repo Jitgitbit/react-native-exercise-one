@@ -9,7 +9,9 @@ export default function App() {
       </View>
       <View style={styles.body}>
         <Text>De kat krabt de krollen van de trap.</Text>
-        <Text>De kat krabt de krollen van de trap.</Text>
+        <Text style={styles.boldText}>De kat krabt de krollen van de trap.
+          <Text>TEST</Text>
+        </Text>
         <Text>De kat krabt de krollen van de trap.</Text> 
         <Text>De kat krabt de krollen van de trap.</Text>
       </View>
