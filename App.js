@@ -18,6 +18,7 @@ export default function App() {
 }
 
 // STYLES ARE NOT AUTOMATICALLY INHERITED !!!
+// One exception though: Text widgets within Text Widgets !!!
 
 const styles = StyleSheet.create({
   container: {
