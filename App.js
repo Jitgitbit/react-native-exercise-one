@@ -13,9 +13,19 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      
       <Text>Enter name:</Text>
-      <TextInput style={styles.input}/>
-        <Text>Hello, my name is {name}, age: {age}</Text>
+      <TextInput 
+      style={styles.input}
+      onChangeText={(value)=> setName(value)}
+      placeholder={'enter your name here'} />
+      <TextInput 
+      style={styles.input}
+      onChangeText={(val)=> setAge(val)}
+      placeholder={'age 99?'} />
+
+      <Text>Hello, my name is {name}, age: {age}</Text>
+
       <View style={styles.buttonContainer}>
         <Button title='update state' onPress={pressHandler}/>
       </View>
