@@ -27,10 +27,7 @@ export default function App() {
       placeholder={'age 99?'} />
 
       <Text>Hello, my name is {name}, age: {age}</Text>
-
-      <View style={styles.buttonContainer}>
-        <Button title='update state' onPress={pressHandler}/>
-      </View>
+1
     </View>
   );
 }
