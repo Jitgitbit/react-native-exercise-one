@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { StyleSheet, Text, View, Button } from 'react-native';
+import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
 
 export default function App() {
 
@@ -13,6 +13,8 @@ export default function App() {
 
   return (
     <View style={styles.container}>
+      <Text>Enter name:</Text>
+      <TextInput style={styles.input}/>
         <Text>Hello, my name is {name}, age: {age}</Text>
       <View style={styles.buttonContainer}>
         <Button title='update state' onPress={pressHandler}/>
@@ -20,9 +22,6 @@ export default function App() {
     </View>
   );
 }
-
-// STYLES ARE NOT AUTOMATICALLY INHERITED !!!
-// One exception though: Text widgets within Text Widgets !!!
 
 const styles = StyleSheet.create({
   container: {
@@ -33,5 +32,12 @@ const styles = StyleSheet.create({
   },
   buttonContainer: {
     marginTop: 20
+  },
+  input: {
+    margin: 10,
+    borderWidth: 1,
+    borderColor:'#777',
+    padding:8,
+    width:200
   }
 });
