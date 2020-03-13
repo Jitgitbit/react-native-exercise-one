@@ -1,14 +1,17 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function App() {
+
+  const [name, setName] = useState('Thierry');
+
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.boldText}>Root Component Header!</Text>
       </View>
       <View style={styles.body}>
-        <Text>De kat krabt de krollen van de trap.</Text>
+        <Text>Hello, my name is {name}.</Text>
         <Text style={styles.boldText}>De kat krabt de krollen van de trap.
           <Text>TEST</Text>
         </Text>
