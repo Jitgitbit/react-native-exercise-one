@@ -1,22 +1,22 @@
 import React, {useState} from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, Button } from 'react-native';
 
 export default function App() {
 
   const [name, setName] = useState('Thierry');
+  const [person, setPerson] = useState({name: 'Joachim', age: 41});
+
+  const pressHandler = () => {
+    setName('Ikki');
+    setPerson({name:'Olivier', age: 45});
+  };
 
   return (
     <View style={styles.container}>
-      <View style={styles.header}>
-        <Text style={styles.boldText}>Root Component Header!</Text>
-      </View>
-      <View style={styles.body}>
         <Text>Hello, my name is {name}.</Text>
-        <Text style={styles.boldText}>De kat krabt de krollen van de trap.
-          <Text>TEST</Text>
-        </Text>
-        <Text>De kat krabt de krollen van de trap.</Text> 
-        <Text>De kat krabt de krollen van de trap.</Text>
+        <Text>And his name is {person.name}, age: {person.age}.</Text>
+      <View style={styles.buttonContainer}>
+        <Button title='update state' onPress={pressHandler}/>
       </View>
     </View>
   );
@@ -32,15 +32,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  header: {
-    backgroundColor: 'pink',
-    padding: 20,
-  },
-  boldText: {
-    fontWeight: 'bold'
-  },
-  body: {
-    backgroundColor: 'yellow',
-    padding: 20
+  buttonContainer: {
+    marginTop: 20
   }
 });
