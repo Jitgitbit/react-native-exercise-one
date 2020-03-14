@@ -18,13 +18,11 @@ export default function App() {
   return (
     <View style={styles.container}>
       <ScrollView>
-      {people.map(item => {
-        return(
+      {people.map(item => (
             <View key={item.key}>
               <Text style={styles.item}>{item.name}</Text>
             </View>
-        )
-      })}
+      ))}
       </ScrollView>
     </View>
   );
