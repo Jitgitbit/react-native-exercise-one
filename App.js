@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { StyleSheet, Text, View, Button, TextInput } from 'react-native';
+import { StyleSheet, Text, View, Button, TextInput, ScrollView } from 'react-native';
 
 export default function App() {
 
@@ -11,17 +11,21 @@ export default function App() {
     {name: 'Jend', key: '5'},
     {name: 'Dilip', key: '6'},
     {name: 'Ram', key: '7'},
+    {name: 'Alex', key: '8'},
+    {name: 'Luke', key: '9'},
   ]);
 
   return (
     <View style={styles.container}>
+      <ScrollView>
       {people.map(item => {
         return(
-          <View key={item.key}>
-            <Text style={styles.item}>{item.name}</Text>
-          </View>
+            <View key={item.key}>
+              <Text style={styles.item}>{item.name}</Text>
+            </View>
         )
       })}
+      </ScrollView>
     </View>
   );
 }
