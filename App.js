@@ -4,22 +4,23 @@ import { StyleSheet, Text, View, Button, TextInput, ScrollView, FlatList } from 
 export default function App() {
 
   const [people, setPeople] = useState([
-    {name: 'Thierry', key: '1'},
-    {name: 'Joachim', key: '2'},
-    {name: 'Olivier', key: '3'},
-    {name: 'Jan', key: '4'},
-    {name: 'Jend', key: '5'},
-    {name: 'Dilip', key: '6'},
-    {name: 'Ram', key: '7'},
-    {name: 'Alex', key: '8'},
-    {name: 'Luke', key: '9'},
+    {name: 'Thierry', id: '1'},
+    {name: 'Joachim', id: '2'},
+    {name: 'Olivier', id: '3'},
+    {name: 'Jan', id: '4'},
+    {name: 'Jend', id: '5'},
+    {name: 'Dilip', id: '6'},
+    {name: 'Ram', id: '7'},
+    {name: 'Alex', id: '8'},
+    {name: 'Luke', id: '9'},
   ]);
 
   return (
     <View style={styles.container}>
       <FlatList
+      keyExtractor={(item) => item.id}
       data={people}
-      renderItem={({item})=>(
+      renderItem={({item}) => (
         <Text style={styles.item}>{item.name}</Text>
       )}/>
       {/* <ScrollView>
