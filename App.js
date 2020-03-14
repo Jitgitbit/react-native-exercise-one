@@ -15,7 +15,9 @@ export default function App() {
     {name: 'Luke', id: '9'},
   ]);
 
-  pressHandler
+  const pressHandler = (id) => {
+    console.log(`item id:`,id)
+  }
 
   return (
     <View style={styles.container}>
